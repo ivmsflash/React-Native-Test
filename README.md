@@ -44,6 +44,17 @@
  
 
 Материалы по теме:
-https://facebook.github.io/react-native/
-https://expo.io
-https://habrahabr.ru/post/327668/
+- https://facebook.github.io/react-native/
+- https://expo.io
+- https://habrahabr.ru/post/327668/
+
+Порядок запуска:
+- $ npm install -g create-react-native-app
+- $ create-react-native-app project
+- $ cd project
+- $ npm start
+
+Кроме этого потребуется yarn и потом подгрузить react-native-elements:
+- $ npm install --global yarn
+- $ yarn add react-native-elements
+
