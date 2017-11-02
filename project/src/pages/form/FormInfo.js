@@ -11,25 +11,28 @@ export default class FormInfo extends React.Component {
     }
     render() {
         const onBackFunc = () => {
-            Alert.alert("Назад!");
+            Alert.alert(this.props.page3);
+            
         }
         const onSendFunc = () => {
             Alert.alert("Отправить!");
         }
         return (
             <View style={styles.container}>
-                <FormInput style={styles.input} placeholder={'Ваш E-mail'} keyboardType={'email-address'} />
-                <FormInput style={styles.input}  placeholder={'Ваш номер телефона'} keyboardType={'phone' ? 'phone-pad' : 'default'}/>
-                <FormInput style={styles.input}  placeholder={'Ваше сообщение'} />
-                <View style={{ padding: 20}}>
-                    <Button
-                        raised
-                        buttonStyle={styles.button}
-                        textStyle={styles.buttonText}
-                        title={`Отправить`}
-                        onPress={onSendFunc}
-                    />
-                </View>
+                <FormInput style={styles.input} editable={Boolean(this.props.edit)} placeholder={'Ваш E-mail'} keyboardType={'email-address'} />
+                <FormInput style={styles.input} editable={Boolean(this.props.edit)} placeholder={'Ваш номер телефона'} keyboardType={'phone' ? 'phone-pad' : 'default'}/>
+                <FormInput style={styles.input} editable={Boolean(this.props.edit)} placeholder={'Ваше сообщение'} />
+                {this.props.edit &&
+                    <View style={{ padding: 20}}>
+                        <Button
+                            raised
+                            buttonStyle={styles.button}
+                            textStyle={styles.buttonText}
+                            title={`Отправить`}
+                            onPress={onSendFunc}
+                        />
+                    </View>
+                }
                 <View style={{ padding: 20}}>
                     <Button
                         raised

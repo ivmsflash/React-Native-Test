@@ -5,7 +5,6 @@ import { List, ListItem, Button, FormLabel, FormInput } from 'react-native-eleme
 import Page1 from "./src/pages/Page1";
 import Page2 from "./src/pages/Page2";
 
-
 export default class App extends React.Component {
   componentDidMount() {
     this.state = {

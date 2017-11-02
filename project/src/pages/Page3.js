@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import FormInfo from "./FormInfo";
+import FormInfo from "./form/FormInfo";
 
 export default class Page3 extends React.Component {
     render() {
@@ -10,7 +10,7 @@ export default class Page3 extends React.Component {
                 <Text style={styles.subtitle}>{this.props.subtitle}</Text>
                 <Text style={styles.price}>{this.props.price}</Text>
                 <View>
-                    <FormInfo/>
+                    <FormInfo edit={true} page3={this}/>
                 </View>
             </View>
         );

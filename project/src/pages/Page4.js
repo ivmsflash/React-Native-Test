@@ -1,6 +1,6 @@
 import React from 'react';
 import { Alert, StyleSheet, View, Text } from 'react-native';
-import FormInfoDisabled from "./FormInfoDisabled";
+import FormInfoDisabled from "./form/FormInfo";
 
 export default class Page4 extends React.Component {
     render() {
@@ -9,7 +9,7 @@ export default class Page4 extends React.Component {
             <View style={styles.container}>
                 <Text style={styles.title}>{this.props.title}</Text>
                 <View>
-                    <FormInfoDisabled/>
+                    <FormInfo edit="false"/>
                 </View>
             </View>
         );

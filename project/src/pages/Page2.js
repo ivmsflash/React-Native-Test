@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, ScrollView } from 'react-native';
+import { Alert, StyleSheet, View, ScrollView } from 'react-native';
 import { List, ListItem, Button, FormLabel, FormInput } from 'react-native-elements'
 import Page3 from './Page3';
 
@@ -27,8 +27,14 @@ export default class Page2 extends React.Component {
         };
         
         if (this.state.showPage3) {
+            //global.Object(this.state.itm);
+            //Alert.alert(global.Object());
             return (
-                <Page3 />
+                <Page3
+                    title={this.state.itm.title} 
+                    subtitle={this.state.itm.title}
+                    price={this.state.itm.title}
+                    page2={this} />
             );
         }
         else
