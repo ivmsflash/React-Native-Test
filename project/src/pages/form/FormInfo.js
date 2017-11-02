@@ -6,22 +6,37 @@ export default class FormInfo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            back: false
+            email: "",
+            phone: "",
+            message: ""
         }
     }
     render() {
         const onBackFunc = () => {
             this.props.backFunc();
-            
         }
         const onSendFunc = () => {
-            this.props.sendFunc();
+            this.props.sendFunc(this.state.email, this.state.phone, this.state.message);
         }
         return (
             <View style={styles.container}>
-                <FormInput style={styles.input} editable={Boolean(this.props.edit)} placeholder={'Ваш E-mail'} keyboardType={'email-address'} />
-                <FormInput style={styles.input} editable={Boolean(this.props.edit)} placeholder={'Ваш номер телефона'} keyboardType={'phone' ? 'phone-pad' : 'default'}/>
-                <FormInput style={styles.input} editable={Boolean(this.props.edit)} placeholder={'Ваше сообщение'} />
+                <FormInput
+                    style={styles.input}
+                    editable={Boolean(this.props.edit)}
+                    placeholder={this.props.data?String(this.props.data[0]):'Ваш E-mail'}
+                    keyboardType={'email-address'}
+                    onChangeText={(value) => this.setState({email: value})}/>
+                <FormInput
+                    style={styles.input}
+                    editable={Boolean(this.props.edit)}
+                    placeholder={this.props.data?String(this.props.data[1]):'Ваш номер телефона'}
+                    keyboardType={'phone' ? 'phone-pad' : 'default'}
+                    onChangeText={(value) => this.setState({phone: value})}/>
+                <FormInput
+                    style={styles.input}
+                    editable={Boolean(this.props.edit)}
+                    placeholder={this.props.data?String(this.props.data[2]):'Ваше сообщение'}
+                    onChangeText={(value) => this.setState({message: value})}/>
                 {this.props.edit &&
                     <View style={{ padding: 20}}>
                         <Button

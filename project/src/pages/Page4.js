@@ -7,11 +7,12 @@ export default class Page4 extends React.Component {
         const onBackToList = () => {
             this.props.toPage3();
         };
+        
         return (
             <View style={styles.container}>
                 <Text style={styles.title}>{this.props.title}</Text>
                 <View>
-                    <FormInfo edit={false} backFunc={onBackToList}/>
+                    <FormInfo edit={false} data={this.props.data} backFunc={onBackToList}/>
                 </View>
             </View>
         );

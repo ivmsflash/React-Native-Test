@@ -21,6 +21,7 @@ export default class Page2 extends React.Component {
             showPage2: true,
             showPage3: false,
             showPage4: false,
+            dataInput: null,
             data: null
         }
     }
@@ -50,8 +51,9 @@ export default class Page2 extends React.Component {
             });
         };
 
-        const toPage4 = () => {
+        const toPage4 = (email, phone, msg) => {
             this.setState({
+                dataInput: [email, phone, msg],
                 showPage2: false,
                 showPage3: false,
                 showPage4: true
@@ -75,7 +77,8 @@ export default class Page2 extends React.Component {
             return (
                 <Page4
                     title={this.state.data.title} 
-                    toPage3={toPage3} />
+                    toPage3={toPage3}
+                    data={this.state.dataInput} />
             );
         }
         else if (this.state.showPage2)

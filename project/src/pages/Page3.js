@@ -7,8 +7,8 @@ export default class Page3 extends React.Component {
         const onBackToList = () => {
             this.props.toPage2();
         };
-        const onSend = () => {
-            this.props.toPage4();
+        const onSend = (email, phone, msg) => {
+            this.props.toPage4(email, phone, msg);
         };
         return (
             <View style={styles.container}>
