@@ -58,3 +58,4 @@
 - $ npm install --global yarn
 - $ yarn add react-native-elements
 
+Expo link. Open it in Expo: exp://xv-pw2.ivmsflash.project.exp.direct:80
