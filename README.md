@@ -48,6 +48,7 @@
 - https://expo.io
 - https://habrahabr.ru/post/327668/
 
+-------------------------------------------------------------------------------------------
 Порядок запуска:
 - $ npm install -g create-react-native-app
 - $ create-react-native-app project
@@ -59,3 +60,11 @@
 - $ yarn add react-native-elements
 
 Expo link. Open it in Expo: exp://xv-pw2.ivmsflash.project.exp.direct:80
+
+Screens:
+
+[![](http://ivms-flash.ru/github/screen1.png)](http://ivms-flash.ru/github/screen1.png)
+[![](http://ivms-flash.ru/github/screen2.png)](http://ivms-flash.ru/github/screen2.png)
+[![](http://ivms-flash.ru/github/screen3.png)](http://ivms-flash.ru/github/screen3.png)
+[![](http://ivms-flash.ru/github/screen4.png)](http://ivms-flash.ru/github/screen4.png)
+[![](http://ivms-flash.ru/github/screen5.png)](http://ivms-flash.ru/github/screen5.png)
