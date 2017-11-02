@@ -11,11 +11,11 @@ export default class FormInfo extends React.Component {
     }
     render() {
         const onBackFunc = () => {
-            Alert.alert(this.props.page3);
+            this.props.backFunc();
             
         }
         const onSendFunc = () => {
-            Alert.alert("Отправить!");
+            this.props.sendFunc();
         }
         return (
             <View style={styles.container}>

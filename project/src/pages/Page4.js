@@ -1,15 +1,17 @@
 import React from 'react';
 import { Alert, StyleSheet, View, Text } from 'react-native';
-import FormInfoDisabled from "./form/FormInfo";
+import FormInfo from "./form/FormInfo";
 
 export default class Page4 extends React.Component {
     render() {
-        //Alert.alert(this.props.title);
+        const onBackToList = () => {
+            this.props.toPage3();
+        };
         return (
             <View style={styles.container}>
                 <Text style={styles.title}>{this.props.title}</Text>
                 <View>
-                    <FormInfo edit="false"/>
+                    <FormInfo edit={false} backFunc={onBackToList}/>
                 </View>
             </View>
         );

@@ -1,16 +1,22 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { Alert, StyleSheet, View, Text } from 'react-native';
 import FormInfo from "./form/FormInfo";
 
 export default class Page3 extends React.Component {
     render() {
+        const onBackToList = () => {
+            this.props.toPage2();
+        };
+        const onSend = () => {
+            this.props.toPage4();
+        };
         return (
             <View style={styles.container}>
                 <Text style={styles.title}>{this.props.title}</Text>
                 <Text style={styles.subtitle}>{this.props.subtitle}</Text>
                 <Text style={styles.price}>{this.props.price}</Text>
                 <View>
-                    <FormInfo edit={true} page3={this}/>
+                    <FormInfo edit={true} backFunc={onBackToList} sendFunc={onSend}/>
                 </View>
             </View>
         );
