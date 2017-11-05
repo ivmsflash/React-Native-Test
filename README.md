@@ -60,6 +60,7 @@
 - $ yarn add react-native-elements
 
 Expo link: https://expo.io/@ivmsflash/project
+
 [![](http://ivms-flash.ru/github/qr.png)](http://ivms-flash.ru/github/qr.png)
 ### Screens:
 
